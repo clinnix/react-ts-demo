@@ -1,27 +1,29 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react'
+// import StateDemo from './StateDemo'
+// import StateDemo2 from './StateDemo2'
+// import StateDemo3 from './UseRefDemo'
+// import StateDemo4 from './UseMemoDemo'
+// import StateDemo5 from './UseCallbackDemo'
+import useMouse from './useMouse'
+
 
 function App() {
+
+  const {x, y} = useMouse()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>hello world</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+      <p>App page {x} {y}</p>
+      {/* <StateDemo2 /> */}
+      {/* <StateDemo3 /> */}
+      {/* <StateDemo4 /> */}
+      {/* <StateDemo5 /> */}
+
+
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App

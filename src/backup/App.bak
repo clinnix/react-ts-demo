@@ -1,0 +1,53 @@
+import React from "react";
+import logo from "./logo.svg";
+import type {MouseEvent} from "react";
+import "./App.css";
+
+function Hello(props: {flag: boolean}) {
+  if(props.flag) {
+    return (<p>hello1</p>)
+  } else {
+    return (<p>你好</p>)
+  } 
+}
+
+function App() {
+  
+  const fn = (event: MouseEvent<HTMLButtonElement>, name: string) => {
+    event.preventDefault()
+    console.log("click")
+    console.log(name)
+  }
+
+  const flag = false;
+
+  const list = [
+    {username: 'shuangqyue', age: 13},
+    {username: 'wangmeng', age: 17},
+    {username: 'chenfeng', age: 14}
+  ]
+
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <div><Hello flag={flag}></Hello></div>
+        <div>
+          {list.map((item) => {
+            const {username, age} = item;
+            return <li key={username}>{username}\{age}</li>
+          })}
+        </div>
+       <div>
+        <button onClick={(event) => {fn(event, '凯越')} }>click</button>
+       </div>
+      </header>
+    </div>
+  );
+}
+
+export default App;
