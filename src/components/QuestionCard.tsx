@@ -2,7 +2,7 @@ import React,{FC} from "react";
 import styles from './QuestionCard.module.scss'
 
 
-type PropsType = {
+export type PropsType = {
     id: string;
     title: string;
     isStar: boolean;
