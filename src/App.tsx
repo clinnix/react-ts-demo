@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ChangeEvent, useState } from 'react'
 // import StateDemo from './StateDemo'
 // import StateDemo2 from './StateDemo2'
 // import StateDemo3 from './UseRefDemo'
@@ -6,6 +6,7 @@ import React from 'react'
 // import StateDemo5 from './UseCallbackDemo'
 // import useMouse from './useMouse'
 // import useGetInfo from './useGetInfo'
+import FormElemsDemo from './demo/FormElemsDemo'
 import List from './pages/manage/List'
 import { Router } from 'react-router-dom'
 import { RouterProvider } from 'react-router'
@@ -33,8 +34,13 @@ function App() {
     //   {/* <p>{loading ? '加载中...' : info}</p> */}
     //   // <h1 style={{background: 'yellow'}}>问卷 FE</h1>
     //   // <List />
-    // // </div> 
-    
+    // // </div> \
+
+    // return (
+    //   <>
+    //     <FormElemsDemo />
+    //   </>
+    // )
 
 
 }
