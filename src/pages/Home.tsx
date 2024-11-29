@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button, Typography } from 'antd'
 import { MANAGE_INDEX_PATHNAME } from '../router'
 import styles from './Home.module.scss'
+import axios from 'axios'
 
 const { Title, Paragraph } = Typography
 
@@ -15,6 +16,14 @@ const Home: FC = () => {
   //         search: 'a=10'
   //     })
   // }
+
+  useEffect(() => {
+
+    // fetch('/api/test')
+    //   .then(res => res.json())
+    //   .then(data => console.log('fetch data', data))
+    axios.get('/api/test').then(res => console.log('axios data', res.data))
+  })
 
   return (
     <div className={styles.container}>

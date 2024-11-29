@@ -10,6 +10,7 @@ import NotFound from "../pages/NotFound";
 import List from "../pages/manage/List";
 import Trash from "../pages/manage/Trash";
 import Edit from "../pages/question/Edit";
+import Stat from "../pages/question/Stat";
 import Star from "../pages/manage/Star";
 
 
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
             {
                 path: 'edit/:id',
                 element: <Edit />
+            },
+            {
+                path: 'stat/:id',
+                element: <Stat />
             }
         ]
     }
